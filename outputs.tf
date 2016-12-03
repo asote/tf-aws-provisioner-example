@@ -1,3 +1,3 @@
-output "instance_dns_name" {
-  value = ["${aws_instance.web.public_dns}"]
+output "instance_IP" {
+  value = ["${aws_instance.web.public_ip}"]
 }
