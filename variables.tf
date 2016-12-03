@@ -8,6 +8,6 @@ variable "count" {
 }
 
 variable "admin_password" {
-  default = "$hIs*spNC10Ye"
+  default     = "$hIs*spNC10Ye"
   description = "Windows Administrator password to login as."
 }
