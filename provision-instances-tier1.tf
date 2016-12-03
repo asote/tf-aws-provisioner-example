@@ -8,8 +8,8 @@ resource "null_resource" "copy_scripts" {
   connection {
     type     = "winrm"
     user     = "Administrator"
-    password = "${var.admin_password}"   # This is also the password to log in.
-    host     = "${aws_elb.web.dns_name}"
+    password = "${var.admin_password}"          # This is also the password to log in.
+    host     = "${aws_instance.web.public_dns}"
     timeout  = "10m"
   }
 
@@ -26,8 +26,8 @@ resource "null_resource" "install" {
   connection {
     type     = "winrm"
     user     = "Administrator"
-    password = "${var.admin_password}"   # This is also the password to log in.
-    host     = "${aws_elb.web.dns_name}"
+    password = "${var.admin_password}"          # This is also the password to log in.
+    host     = "${aws_instance.web.public_dns}"
     timeout  = "10m"
   }
 
